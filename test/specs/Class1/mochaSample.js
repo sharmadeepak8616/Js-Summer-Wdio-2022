@@ -4,18 +4,18 @@ const { expect , assert } = require("chai");
 // describe section : Feature
 describe('Login', () => {
     // it-block : defines a testcase
-    // it('Verify user can login with valid credentials', () => {
+    it('Verify addNumbers function', () => {
         
-    //     const res = sampleTest.addNumbers(2,5);
+        const res = sampleTest.addNumbers(2,5);
 
-    //     expect(res, "expect - addFunction does not work as expected").to.equal(7);
-    //     assert.equal(res, 7, "assert - addFunction does not work as expected")
+        expect(res, "expect - addFunction does not work as expected").to.equal(7);
+        assert.equal(res, 7, "assert - addFunction does not work as expected")
 
-    //     expect(1===1, "fail the testcase").to.be.true;
+        expect(1===1, "fail the testcase").to.be.true;
 
-    //     expect(1===2, "fail the testcase").to.be.false;
+        expect(1===2, "fail the testcase").to.be.false;
 
-    // });
+    });
 
     it('Verify the page title', async () => {
         /**
