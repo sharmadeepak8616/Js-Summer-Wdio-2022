@@ -58,7 +58,7 @@
  *      const webElement =  await $('//tagName[starts-with(@attrName, "starting attr value")]')
  * 
  * 6. using starting portion of text value
- **      //tagName[starts-with(text(), "partial text value")]     
+ **      //tagName[contains(text(), "partial text value")]     
  *       Find the tag(tagName) in the dom where text contains "partial text value"
  **     eg: //span[starts-with(text() , "Fee")]
  * 
@@ -107,6 +107,42 @@
  * eg:
  **      //label[text()="Female"]/following-sibling::input
  **      //h2[text()="August 2022"]/following-sibling::table//button[@data-day="16"]
+ * 
+ *  2. preceding-sibling
+ * *    //tag[condition(s)]/preceding-sibling::tag2[condition(s)]
+ * 
+ *  3. following
+ * *    //tag[condition(s)]/following::tag2[condition(s)]
+ * eg: //a[contains(text(), 'Create a')]/following::a[text()='Log In']
+ * 
+ *  4. preceding
+ * *    //tag[condition(s)]/preceding::tag2[condition(s)]     
+ * 
+ * 
+ * 
+ * Generic xpath discussion:
+ * 
+ * *    //tag[condition(s)]
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * 
  * 
  */
@@ -248,6 +284,12 @@
  * 
  * To find WebElement:
  * function -> $
+ * 
+ * To find WebElements:
+ * function -> $$   (findElements)
+ * 
+ * returns Array [we1, we2, we3, we4]
+ * 
  * 
  */
 /**
