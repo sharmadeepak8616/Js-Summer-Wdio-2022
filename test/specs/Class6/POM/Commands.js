@@ -45,6 +45,10 @@ class Commands {
         await dropdownElement.selectByVisibleText(selectThis);
     }
 
+    async getTextFromWebElement(locator) {
+        const element = this.findWebElement(locator);
+        return await element.getText();
+    }
 
 
 }
