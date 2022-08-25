@@ -41,7 +41,7 @@ describe('POM Demo', () => {
 
     });
 
-    it.only('Verify user can login - using POM', async () => {
+    it('Verify user can login - using POM', async () => {
 
         const hPage = new Homepage();
         /**
