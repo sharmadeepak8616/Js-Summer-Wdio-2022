@@ -67,7 +67,7 @@ describe('Login', () => {
 
     });
 
-    it.only('Misc functions from browser', async () => {
+    it('Misc functions from browser', async () => {
         const launchUrl = 'https://www.facebook.com/';
         await browser.url(launchUrl);
 
