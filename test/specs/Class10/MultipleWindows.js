@@ -27,6 +27,9 @@ describe('Multiple Windows', () => {
          * 1. Launch facebook.com
          * 2. Click on Instagram
          * 3. Verify Instagram opened in a new window
+         *      verify there are 2 windows
+         *      verify one title is facebook - log in ...
+         *      verify one title is Instagram
          */
         // 1. Launch facebook.com
         const launchUrl = 'https://www.facebook.com/';
@@ -86,8 +89,48 @@ describe('Multiple Windows', () => {
 
         await browser.pause(5000);
 
+        const allHandles2 = ['h1', 'h2', 'h3' , 'h4' , 'h5'];
+
+        for (let i = 0 ; i < allHandles2.length ; i++) {
+            await browser.switchToWindow(allHandles2[i]);
+            const pageTitle = await browser.getTitle();
+            if (!pageTitle.includes(titleContains)) {
+                await browser.closeWindow();
+            }
+        }
+
+
 
     });
+
+    /**
+     *  allHandles = [h1, h2, h3, h4, h5]
+     *  connect with Oculus
+     * 
+     *  h1
+     *  connect browser with h1
+     *  if (h1.title() === 'Oculus') {
+     *      break
+     *  }
+     * 
+     *  h2
+     *  connect browser with h2
+     *  if (h2.title() === 'Oculus') {
+     *      break
+     *  }
+     * 
+     *  h3
+     *  connect browser with h3
+     *  if (h3.title() === 'Oculus') {
+     *      break
+     *  }
+     * 
+     *  now browser with Oculus
+     * 
+     *  browser.closeWindow()
+     * 
+     *  allHandles = [h1, h2, h4, h5]
+     */
 
 
 });
