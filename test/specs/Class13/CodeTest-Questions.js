@@ -3,7 +3,7 @@
 
     /**
      * Question - 1: (40-points)
-     * 1. Launch facebook.com
+     * 1. Launch hotels.com
      * 2. Click on Learn about Hotels.com Rewards
      * 3. -> Verify Hotels Rewards opened in a new window
      * 4. Click on Join Now
@@ -40,4 +40,11 @@
      * 3. Click on + button
      * 4. Verify minTemp on and in Today's timeline is same
      * 5. Verify maxTemp on and in Today's timeline is same
+     */
+
+    /**
+     * Write:
+     *      Scenario in feature files
+     *      Step definition
+     *      Page object Model
      */
