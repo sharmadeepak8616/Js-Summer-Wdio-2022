@@ -62,6 +62,7 @@ describe('Learning moment-library', () => {
          * Second -> s -- ss
          * Timezone -> Z
          * am/pm    -> a/A (a: am/pm ; A: AM/PM)
+         * DayName -> ddd -- dddd
          */
 
         // get current date in "MMM D-YYYY h*m*s a"

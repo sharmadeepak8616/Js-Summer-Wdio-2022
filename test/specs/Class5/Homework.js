@@ -21,7 +21,7 @@
  * 
  * 
  */
-describe('', () => {
+describe('Hotels search', () => {
     it.only('Verify destination and check-in/check-out dates are selected', async () => {
         // Verify destination and check-in/ and check-out dates are as user selected
         // 1. Launch hotels.com
@@ -45,7 +45,7 @@ describe('', () => {
         // 4. Select Aug 20 to Sep-5 as check-in and check-out respectively
         await $('#date_form_field-btn').click();
         await browser.pause(3000);
-        const allSeptDates = await $$('//h2[text()="September 2022"]/following-sibling::table//button[not(@disabled)]');
+        const allSeptDates = await $$('//h2[text()="October 2022"]/following-sibling::table//button[not(@disabled)]');
             for (const dateSelected of allSeptDates){
                 const date = await dateSelected.getAttribute('data-day');
                 if(date.localeCompare('5') === 0){
@@ -54,7 +54,7 @@ describe('', () => {
                 }
             }
         await browser.pause(3000);
-        const allSeptDates2 = await $$('//h2[text()="September 2022"]/following-sibling::table//button[not(@disabled)]');
+        const allSeptDates2 = await $$('//h2[text()="October 2022"]/following-sibling::table//button[not(@disabled)]');
             for (const dateSelected of allSeptDates2){
                 const date = await dateSelected.getAttribute('data-day');
                 if(date.localeCompare('20') === 0){
