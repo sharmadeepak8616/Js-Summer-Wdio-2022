@@ -6,9 +6,11 @@
  * 
  * 
  * <select> tag dropdowns
- *      options in  select-tag are present index-wise
- *      options has value-attribute
- *      options has text-value
+ *      option-tags are present index-wise in the select-tag
+ *      option-tags has value-attribute
+ *      option-tags has text-value
+ *      text-value of the option-tag is getting displayed to the user
+ *
  * 
  * 
  * Steps to select value from dropdown:

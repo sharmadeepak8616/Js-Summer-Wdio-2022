@@ -121,5 +121,19 @@ describe('Locator strategies part - 2', () => {
     });
 
 
+    it('Testcase on https://www.accuweather.com/', async () => {
+        /**
+         * 1. Launch https://www.accuweather.com/
+         * 2. Verify current temp is between 50 and 60
+         */
+        // 1. Launch https://www.accuweather.com/
+        await browser.url('https://www.accuweather.com/');
+
+        // 2. Verify current temp is between 50 and 60
+        const tempValue = await $('.recent-location-temp').getText();
+        console.log(`\n\nTemp value = ${tempValue}`);
+
+    });
+
 
 });

@@ -28,7 +28,7 @@ describe('Multiple Windows', () => {
          * 2. Click on Instagram
          * 3. Verify Instagram opened in a new window
          *      verify there are 2 windows
-         *      verify one title is facebook - log in ...
+         *      verify one title is Facebook – log in or sign up
          *      verify one title is Instagram
          */
         // 1. Launch facebook.com

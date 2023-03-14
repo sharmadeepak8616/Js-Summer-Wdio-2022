@@ -97,26 +97,36 @@
  * 
  * 
  * Advanced xpath
- *  1. using parent/grandparent etc
+ *  1. using parent/grandparent etc (chained xpath)
  * *    //div[@id="header"]//div[contains(@class,'selectric-units')]
  * *    //a[@data-day="0"]//span[@class="open"]
  * 
- * 2. using xpath-axes
- *  1. following-sibling
- * *    //tag[condition(s)]/following-sibling::tag2[condition(s)]    
- * eg:
- **      //label[text()="Female"]/following-sibling::input
- **      //h2[text()="August 2022"]/following-sibling::table//button[@data-day="16"]
+ *  2. using xpath-axes
+ *      1. following-sibling (any sibling-tag appearing in the dom after a particular tag)
+ **     //tagName[condition(s)]/following-sibling::tag2[condition(s)]
+ *      eg:
+ **          //h2[text()="November 2022"]/following-sibling::table//button[@disabled]
+ **          //label[text()="Female"]/following-sibling::input
+ **          //h2[text()="November 2022"]/following-sibling::table//button[@data-day="25"] 
  * 
- *  2. preceding-sibling
- * *    //tag[condition(s)]/preceding-sibling::tag2[condition(s)]
+ *      2. preceding-sibling (any sibling-tag appearing in the dom before a particular tag)
+ **     //tagName[condition(s)]/preceding-sibling::tagName2[condition(s)]
+ *      eg:
+ **         //section[@id="lodging-search-form-1"]/preceding-sibling::h1
  * 
- *  3. following
- * *    //tag[condition(s)]/following::tag2[condition(s)]
- * eg: //a[contains(text(), 'Create a')]/following::a[text()='Log In']
+ *      3. following (any tag appearing in the dom after a particular tag)
+ **     //tagName[condition(s)]/following::tagName2[condition(s)]
+ *      eg:
+ **         //a[text()="Create a Page"]/following::a[text()="Log in"] 
  * 
- *  4. preceding
- * *    //tag[condition(s)]/preceding::tag2[condition(s)]     
+ *      4. preceding (any tag appearing in the dom before a particular tag)
+ **     //tagName[condition(s)]/preceding::tagName2[condition(s)] 
+ * 
+ *      5. parent ( to go to parent-tag from child-tag)
+ **     //tagName[condition(s)]/parent::tagName[condition(s)]
+ * 
+ *      .. can also be use like parent-axes
+ **     //section[@id="lodging-search-form-1"]/../../../div[@role] 
  * 
  * 
  * 
